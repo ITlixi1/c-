@@ -26,3 +26,23 @@ int main()
 	printf("%d", pb->number);
 	return 0;
 }
+
+*********getchar 
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+int main()
+{
+	int net;
+	char password[20] = { 0 };
+	printf("输入密码->");
+	scanf("%s", password);
+	getchar();
+	printf("确认密码（Y\\N）?\n");
+	net = getchar();
+	if (net == 'Y')
+		printf("密码正确");
+	else
+		printf("密码不正确");
+
+	return 0;
+}

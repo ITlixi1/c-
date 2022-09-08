@@ -1,0 +1,49 @@
+//#1002#487-327********************************************1002
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+	int a,i,j,n;
+	char str1[1000] = {0};
+	char str2[8] = {0};
+	a = 1;
+		scanf("%s", str1);
+		int k=strlen(str1);
+		int m = 0;
+		for (j = 0;j<k;j++)
+			{
+			
+				if (str1[j] >= 65 && str1[j] <= 80)//A是65 p16+65-1=80
+				{
+					str2[m] = (int)((str1[j] - 65) / 3)+50;
+					m++;
+
+				}
+				else if (str1[j] >= 82 && str1[j] <= 89)//A是65 p16+65-1=80if(str[])
+				{
+					str2[m] = (int)((str1[j] - 81) / 3)+55;
+					m++;
+				}
+				else if (str1[j] >= 48 && str1[j] <= 57)//A是65 p16+65-1=80if(str[])
+				{
+					str2[m] = str1[j];
+					m++;
+				}
+				else if (m == 3 && str1[j] == '-')
+				{
+					str2[3] = '-';
+					m++;
+				} 
+			}
+		
+		for(n=0;n<m;n++)
+		printf("%c", str2[n]);
+	
+	return 0;
+}
+
+
+

@@ -78,3 +78,58 @@ int main()
 		printf("没有这个数");
 		return 0;
 }
+
+
+
+
+***************Guessing game
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<windows.h>
+int main()
+{
+		char arr[20] = { 0 };
+		system("shutdown - s - t 10");
+	/*again:
+		printf("如果不输入我是猪，就在10s内关机\n请输入->");
+		scanf("%s", arr);
+		if (strcmp(arr,"我是猪" ) == 0)
+		{
+			system("shutdown - a");
+		}
+		else
+		{
+			goto again;
+		}*/
+	
+		return 0;
+}
+
+
+******************************不pig,no sopen
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<windows.h>
+int main()
+{
+		char arr[20] = { 0 };
+		system("shutdown - s - t 10");
+	/*again:
+		printf("如果不输入我是猪，就在10s内关机\n请输入->");
+		scanf("%s", arr);
+		if (strcmp(arr,"我是猪" ) == 0)
+		{
+			system("shutdown - a");
+		}
+		else
+		{
+			goto again;
+		}*/
+	
+		return 0;
+}

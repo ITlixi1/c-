@@ -157,3 +157,26 @@ int main()
 	A(a);
 	return 0;
 }
+
+
+#######################################
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int Lenght(char* arr)
+{
+	
+	if (*arr != '\0')
+		return 1 + Lenght(arr + 1);
+	else
+		return 0;
+}
+
+int main()
+{
+	char arr[10] = {0};
+	scanf("%s", arr);
+	int a=Lenght(arr);
+	printf("%d", a);
+	return 0;
+}

@@ -133,3 +133,27 @@ int main()
 	
 		return 0;
 }
+
+
+
+#######################
+//正常顺序输出数字各位
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+void A(int a)
+{
+if(a>9)
+{
+		A(a/10);
+}
+printf("%d ",a%10);
+}
+
+int main()
+{
+	int a = 0;
+	scanf("%d", &a);
+	A(a);
+	return 0;
+}

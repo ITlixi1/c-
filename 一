@@ -180,3 +180,59 @@ int main()
 	printf("%d", a);
 	return 0;
 }
+################################################# ##########函数数字查找
+//二分查找的函数编程
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int  Num_Find(int arr[], int k,int l)
+{
+         
+	int left = 0;
+	int right = l - 1;
+	while (left <= right)
+	{
+		int mid = (left + right) / 2;
+		if (arr[mid] > k)
+			right = mid - 1;
+		else if (arr[mid] < k)
+			left = mid + 1;
+		else
+			return mid;
+	}
+	return -1;
+}
+
+void Arr_input(int p[],int l)
+{
+	int* k = p+l-1;
+
+	for(;p<=k;p++)
+	{
+		scanf_s("%d", p);
+	}
+}
+
+int main()
+{
+	int arr[1000] = {0};
+	int  k=0;
+	int  l=0;
+	printf("输入数组长度->");
+	scanf_s("%d", &l);
+	printf("输入数组\n");
+	Arr_input(arr,l);//输入数组得函数
+	printf("输入需要查找得数—>");
+	scanf_s("%d", &k);
+	//函数输出为下标，输出为-1是便没有找到
+	int ret = Num_Find(arr,k,l);
+	if (ret == -1)
+	{
+		printf("\n没有找到这个数");
+	}
+	else
+		printf("\n找到这个数为arr[%d]", ret);
+
+	return 0;
+}
+
